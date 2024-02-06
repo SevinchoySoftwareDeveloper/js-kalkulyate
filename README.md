@@ -1,1 +1,213 @@
 # js-kalkulyate
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="karimova sevinch" />
+    <title>Calculyate</title>
+  </head>
+  <style>
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0px auto;
+      padding: 15px 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: black;
+    }
+    .btn {
+      padding: 5px 24px;
+      transition: 0.5s;
+      outline: none;
+      border: none;
+      background: inherit;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .button2 {
+      background-color: white;
+      color: black;
+      border: 2px solid #abc;
+    }
+    .button2:hover {
+      background-color: #abc;
+      color: black;
+      border: 1px solid red;
+      box-shadow: 1px 2px 15px 5px red;
+    }
+
+    input[type="button"] {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+
+  <body>
+    <table>
+      <tr>
+        <th colspan="3"><input class="btn button2" type="text" id="text" /></th>
+        <th>
+          <input class="btn button2" type="button" onclick="clr()" value="C" />
+        </th>
+      </tr>
+
+      <tr>
+        <th>
+          <input
+            class="btn button2"
+            type="button"
+            value="1"
+            onclick="pisc(1)"
+          />
+        </th>
+        <th>
+          <input
+            class="btn button2"
+            type="button"
+            value="2"
+            onclick="pisc(2)"
+          />
+        </th>
+        <th>
+          <input
+            class="btn button2"
+            type="button"
+            value="3"
+            onclick="pisc(3)"
+          />
+        </th>
+        <th>
+          <input
+            class="btn button2"
+            type="button"
+            value="/"
+            onclick="pisc('/')"
+          />
+        </th>
+      </tr>
+
+      <tr>
+        <th>
+          <input
+            class="btn button2"
+            type="button"
+            value="4"
+            onclick="pisc(4)"
+          />
+        </th>
+        <th>
+          <input
+            class="btn button2"
+            type="button"
+            value="5"
+            onclick="pisc(5)"
+          />
+        </th>
+        <th>
+          <input
+            class="btn button2"
+            type="button"
+            value="6"
+            onclick="pisc(6)"
+          />
+        </th>
+        <th>
+          <input
+            class="btn button2"
+            type="button"
+            value="*"
+            onclick="pisc('*')"
+          />
+        </th>
+      </tr>
+
+      <tr>
+        <th>
+          <input
+            class="btn button2"
+            type="button"
+            value="7"
+            onclick="pisc(7)"
+          />
+        </th>
+        <th>
+          <input
+            class="btn button2"
+            type="button"
+            value="8"
+            onclick="pisc(8)"
+          />
+        </th>
+        <th>
+          <input
+            class="btn button2"
+            type="button"
+            value="9"
+            onclick="pisc(9)"
+          />
+        </th>
+        <th>
+          <input
+            class="btn button2"
+            type="button"
+            value="-"
+            onclick="pisc('-')"
+          />
+        </th>
+      </tr>
+      <tr>
+        <th>
+          <input
+            class="btn button2"
+            type="button"
+            value="."
+            onclick="pisc('.')"
+          />
+        </th>
+        <th>
+          <input
+            class="btn button2"
+            type="button"
+            value="0"
+            onclick="pisc(0)"
+          />
+        </th>
+        <th>
+          <input
+            class="btn button2"
+            type="button"
+            value="="
+            onclick="solve()"
+          />
+        </th>
+        <th>
+          <input
+            class="btn button2"
+            type="button"
+            value="+"
+            onclick="pisc('+')"
+          />
+        </th>
+      </tr>
+    </table>
+
+    <script>
+      function pisc(val) {
+        document.getElementById("text").value += val;
+      }
+      function solve() {
+        var x = document.getElementById("text").value;
+        var y = eval(x);
+        document.getElementById("text").value = y;
+      }
+      function clr(val) {
+        document.getElementById("text").value = "";
+      }
+    </script>
+  </body>
+</html>
