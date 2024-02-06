@@ -1,4 +1,4 @@
-# js-kalkulyate
+# js-calculate
 <!DOCTYPE html>
 <html lang="en">
   <head>
